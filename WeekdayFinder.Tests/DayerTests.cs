@@ -16,5 +16,14 @@ namespace WeekdayFinder.Tests
       Dayer.Splitter(input);
       Assert.AreEqual(expected, Dayer.Year);
     }
+
+    [TestMethod]
+    public void Weekday_ReturnWeekday_String()
+    {
+      string input = "12/31/1999";
+      Dayer.Splitter(input);
+      string expected = "Friday";
+      Assert.AreEqual(expected, Dayer.Weekday());
+    }
   }
 }
